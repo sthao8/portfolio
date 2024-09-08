@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Shoua Thao
+{% endblock %}
+
+{% block main %}
+    <div class="row mx-xs-0 mx-md-5 index-container">
+        <div class="col-sm p-3 flex-column align-content-end mh-100">
+            <div class="accordion accordion-flush" id="menu">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed large-button-font" type="button" data-bs-toggle="collapse" data-bs-target="#aboutMe" id="about-me-button">
+                            About Me
+                        </button>
+                    </h2>
+                    <div id="aboutMe" class="accordion-collapse collapse show" data-bs-parent="#menu">
+                        <div class="accordion-body">
+                            {{about_me_text}}
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed large-button-font" type="button" data-bs-toggle="collapse" data-bs-target="#projects" id="projects-button">
+                            Projects
+                        </button>
+                    </h2>
+                    <div id="projects" class="accordion-collapse collapse" data-bs-parent="#menu">
+                        <div class="accordion-body">
+                            <ul class="list-unstyled">
+                                {% for project in projects %}
+                                <li><a href="{{ project.url}}" target="__blank" rel="noopener noreferrer" class="custom-a">{{project.name}}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed large-button-font" type="button" data-bs-toggle="collapse" data-bs-target="#contact" id="contact-button">
+                            Contact
+                        </button>
+                    </h2>
+                    <div id="contact" class="accordion-collapse collapse" data-bs-parent="#menu">
+                        <div class="accordion-body">
+                            Email me at <a href="mailto:{{email}}" class="custom-a">{{email}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm border bg-light p-3 align-content-end mh-100 overflow-auto" id="right-div">
+            <img src="{{ image }}" class="illustration mx-auto img-fluid rounded mh-100" id="photo">
+            <div id="project-descriptions" class="illustration" hidden>
+                {% for project in projects %}
+                <div class="border">
+                    {{project.description}}
+                </div>
+                {% endfor %}
+            </div>
+            <div id="contact-content" class="illustration" hidden>
+                contact me graphics of some sort
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var selectedMenu = document.querySelectorAll(".accordion-button");
+        var illustrations = document.querySelectorAll(".illustration");
+        selectedMenu.forEach(function(menuItem) {
+            menuItem.addEventListener("click", function(event) {
+                illustrations.forEach(function(illustration) {
+                    illustration.hidden = true;
+                });
+
+                var id = this.getAttribute("id");
+
+                if (id == "about-me-button") {
+                    var photo = document.getElementById("photo");
+                    photo.hidden = false;
+                }
+                else if (id == "projects-button") {
+                    var projDesc = document.getElementById("project-descriptions");
+                    projDesc.hidden = false;
+                }
+                else if (id == "contact-button") {
+                    var contactContent = document.getElementById("contact-content");
+                    contactContent.hidden = false;
+                };
+            });
+        })
+    </script>
+{% endblock %}

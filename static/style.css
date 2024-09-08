@@ -1,0 +1,33 @@
+.index-container {
+    height: calc(100vh - 190px - 48px - 48px);
+}
+
+.accordion {
+    --bs-accordion-active-bg: var(--bs-accordion-btn-bg);
+    --bs-accordion-btn-focus-box-shadow: 0 0 0 0;
+    --bs-accordion-border-width: 0;
+}
+
+.large-button-font {
+    font-size: 2rem;
+}
+
+.custom-a:link {
+    color: #C1AFF7FF;
+}
+
+.custom-a:visited {
+    color: #8688F5FF;
+}
+
+.custom-a:hover {
+    color: #A297F7FF;
+}
+
+.custom-a:active {
+    color: #6A4884FF;
+}
+
+a {
+    text-decoration: none;
+}
