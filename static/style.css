@@ -1,11 +1,41 @@
+:root {
+    --cream: #d6cfcb;
+    --beige: #ccb7ae;
+    --pink: #a6808c;
+    --light-grey: #706677;
+    --dark-grey: #565264;
+
+    --near-black: #212529;
+    --purple: #3d314a;
+    --light-purple: #684756;
+    --orange: #96705b;
+    --nude: #ab8476;
+
+    --pistachio: #dde8b9;
+    --skin: #e8d2ae;
+    --tan: #d7b29d;
+    --blush: #cb8589;
+    --brown: #796465;
+}
+
 .index-container {
-    height: calc(100vh - 190px - 48px - 48px);
+    height: calc(100vh - 200px);
 }
 
 .accordion {
     --bs-accordion-active-bg: var(--bs-accordion-btn-bg);
     --bs-accordion-btn-focus-box-shadow: 0 0 0 0;
     --bs-accordion-border-width: 0;
+    --bs-accordion-active-color: var(--pink)
+}
+
+.button-focus-border {
+    border-bottom: 0px transparent gray;
+}
+
+
+.button-focus-border:hover {
+    border-bottom: 2px solid var(--pink);
 }
 
 .large-button-font {
@@ -13,21 +43,72 @@
 }
 
 .custom-a:link {
-    color: #C1AFF7FF;
+    color: var(--beige);
 }
 
 .custom-a:visited {
-    color: #8688F5FF;
+    color: var(--beige);
 }
 
 .custom-a:hover {
-    color: #A297F7FF;
+    color: var(--pink);
 }
 
 .custom-a:active {
-    color: #6A4884FF;
+    color: var(--cream);
 }
 
 a {
     text-decoration: none;
+}
+
+body {
+    font-size: 20px;
+    background-color: var(--dark-grey);
+    color: var(--near-black);
+}
+
+.accordion {
+    --bs-accordion-bg: rgba(0,0,0,0);
+}
+
+.accordion-button {
+    background-color: rgba(0,0,0,0);
+}
+
+h1, h2, h3, h4, h5 {
+    color: var(--near-black)
+}
+
+.custom-border {
+    border: 2px solid var(--light-grey)
+}
+
+.border-bottom-dark {
+    border-bottom: 2px solid var(--dark-grey)
+}
+
+.text-skills {
+    color: var(--beige)
+}
+
+.text-skill-names {
+    color: var(--pink);
+    font-size: x-large;
+}
+
+.bg-light-grey {
+    background-color: var(--light-grey);
+}
+
+.content-text {
+    font-size: large;
+}
+
+.name-color {
+    color: var(--pink);
+}
+
+.subname-color {
+    color: var(--beige)
 }
