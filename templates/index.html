@@ -13,7 +13,7 @@
                     <h1 class="name-color mb-0">Shoua Thao</h1>
                 </div>
                 <div class="row ms-1 subname-color">
-                    Python developer
+                    Full-stack python developer
                 </div>
                 <div class="row ms-1 subname-color">
                     with a focus in AI
@@ -92,10 +92,10 @@
             <div id="project-descriptions" class="illustration bg-light-grey rounded text-start p-4" hidden>
                 {% for project in projects %}
                     <div class="border-bottom-dark p-3 text-dark">
-                        <div class="row"><h3 class="ps-0 mb-0 text-skill-names">{{project.name}}</h3></div>
-                        <div class="row"><a href="{{project.source_code}}"  target="__blank" rel="noopener noreferrer" class="custom-a icon-link"><i class="bx bx-code-block"></i>Github Repo</a></div>
+                        <div class="row"><h3 class="ps-0 mb-0 text-project-name">{{project.name}}</h3></div>
+                        <div class="row"><a href="{{project.source_code}}"  target="__blank" rel="noopener noreferrer" class="custom-a-dark icon-link"><i class="bx bx-code-block"></i>Github Repo</a></div>
                         {% if project.url %}
-                            <a href="{{project.url}}"  target="__blank" rel="noopener noreferrer" class="custom-a icon-link"><i class="bx bx-link-external"></i>Explore it!</a>
+                            <a href="{{project.url}}"  target="__blank" rel="noopener noreferrer" class="custom-a-dark icon-link"><i class="bx bx-link-external"></i>Explore it!</a>
                         {% endif %}
                         <div class="row pt-3 content-text">{{project.description}}</div>
                     </div>
