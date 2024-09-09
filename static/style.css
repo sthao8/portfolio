@@ -43,15 +43,15 @@
 }
 
 .custom-a:link {
-    color: var(--beige);
+    color: var(--pink);
 }
 
 .custom-a:visited {
-    color: var(--beige);
+    color: var(--pink);
 }
 
 .custom-a:hover {
-    color: var(--pink);
+    color: var(--beige);
 }
 
 .custom-a:active {
@@ -89,11 +89,11 @@ h1, h2, h3, h4, h5 {
 }
 
 .text-skills {
-    color: var(--beige)
+    color: var(--pink)
 }
 
 .text-skill-names {
-    color: var(--pink);
+    color: var(--beige);
     font-size: x-large;
 }
 
@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .name-color {
-    color: var(--pink);
+    color: var(--pistachio);
 }
 
 .subname-color {

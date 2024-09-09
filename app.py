@@ -57,7 +57,7 @@ def index():
          },
          {"name": "Plant Journal",
          "description": "My first project made with Flask written in Python! A cute plant journal with data stored in SQLite databases, feature plant search via API lookup!",
-         "url": None, #"https://plantjournal-sthao8.pythonanywhere.com",
+         "url": "https://plantjournal-sthao8.pythonanywhere.com",
          "source_code": "https://github.com/sthao8/plant_journal"
          },
          {"name": "Portfolio",
