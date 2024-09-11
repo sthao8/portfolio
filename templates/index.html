@@ -111,6 +111,13 @@
     <script>
         var selectedMenu = document.querySelectorAll(".accordion-button");
         var illustrations = document.querySelectorAll(".illustration");
+
+        const sections = {
+            "about-me-button": "skills",
+            "projects-button": "project-descriptions",
+            "contact-button": "contact-content"
+        }
+
         selectedMenu.forEach(function(menuItem) {
             menuItem.addEventListener("click", function(event) {
                 illustrations.forEach(function(illustration) {
@@ -118,19 +125,7 @@
                 });
 
                 var id = this.getAttribute("id");
-
-                if (id == "about-me-button") {
-                    var photo = document.getElementById("skills");
-                    photo.hidden = false;
-                }
-                else if (id == "projects-button") {
-                    var projDesc = document.getElementById("project-descriptions");
-                    projDesc.hidden = false;
-                }
-                else if (id == "contact-button") {
-                    var contactContent = document.getElementById("contact-content");
-                    contactContent.hidden = false;
-                };
+                document.getElementById(sections[id]).hidden = false;
             });
         })
     </script>
